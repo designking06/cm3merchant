@@ -13,9 +13,16 @@ if(isset($_GET['compID'])){
 </head>
 <?php
 if(isset($_POST['neworder'])){
+if(empty($_POST['newcustname']) AND !empty($_POST['existingcustname'])){
+$custname = $_POST['existingcustname'];
+}
+if(!empty($_POST['newcustname']) AND empty($_POST['existingcustname'])){
 $custname = $_POST['newcustname'];
+}
+if(!empty($_POST['newcustname']) AND !empty($_POST['existingcustname'])){
+echo "Please Make Sure one field is empty!";
+}
 $notes  = $_POST['notes'];
-$product = $_POST['product'];
 $i = 1;
 $order['$i'] = array(
   'orderid'=>$i,
@@ -24,7 +31,12 @@ $order['$i'] = array(
 );
 echo "id:".$order['$i']['orderid']."<br>";
 echo "Name: ".$order['$i']['custname']."<br>";
-foreach($product as $product=>$value){
+if(empty($_POST['product'])){
+  $product = NULL;
+  echo "No Products Sold?<br>";
+}else{
+  $product = $_POST['product'];
+  foreach($product as $product=>$value){
   global $i;
     $productqty = $_POST[$value];
     $order['$i']['product'] = array(
@@ -35,7 +47,8 @@ foreach($product as $product=>$value){
     echo $order['$i']['product']['qty']."<br>";
     $i++;
 }
-    echo "Notes: ".$order['$i']['notes']."<br>";
+}
+echo "Notes: ".$order['$i']['notes']."<br>";
 }
 ?>
 <!--Retrieve Head info -->
@@ -77,16 +90,17 @@ foreach($product as $product=>$value){
         <?php //echo $groupMember_Insert_Error; ?>
         <div class="container w3-white w3-card w3-padding">
             <h2 class="w3-text-blue">New Sale</h2>
-                <form method="post">
+                <form id="custform" method="post">
                     <h3>1. Customer</h3>
                     <div class="w3-margin">
                         <h4>A) New Customer?</h4>
                         <p class="w3-small">Enter Their Name</p>
-                        <input type="text" name="newcustname" class="form-control" placeholder="name" value="Cal">
+                        <input type="text" name="newcustname" class="form-control" placeholder="name" value="">
                         <br><h4>OR</h4><br>
                         <h4>B) Existing Customer?</h4>
                         <p class="w3-small">Choose Customer From List</p>
-                        <select name="existingcustname" form="carform" class="form-control">
+                        <select name="existingcustname" form="custform" class="form-control">
+                          <option value="">None/Not Listed</option>
                           <option value="volvo">Volvo</option>
                           <option value="saab">Saab</option>
                           <option value="opel">Opel</option>
