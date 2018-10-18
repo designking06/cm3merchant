@@ -16,21 +16,26 @@ if(isset($_POST['neworder'])){
 $custname = $_POST['newcustname'];
 $notes  = $_POST['notes'];
 $product = $_POST['product'];
+$i = 1;
+$order['$i'] = array(
+  'orderid'=>$i,
+  'custname' => $custname,
+  'notes'=>$notes
+);
+echo "id:".$order['$i']['orderid']."<br>";
+echo "Name: ".$order['$i']['custname']."<br>";
 foreach($product as $product=>$value){
-    $i = 1;
-    echo $value;
+  global $i;
     $productqty = $_POST[$value];
-    $order['$i'] = array(
-        'custname' => $custname,
-        'product' => array(
+    $order['$i']['product'] = array(
         'id'=>$value,
         'qty' => $productqty
-        ),
-        'notes'=>$notes
     );
-    print_r($order['$i']);
+    echo "Product:".$order['$i']['product']['id']." Qty:";
+    echo $order['$i']['product']['qty']."<br>";
     $i++;
 }
+    echo "Notes: ".$order['$i']['notes']."<br>";
 }
 ?>
 <!--Retrieve Head info -->
@@ -64,7 +69,7 @@ foreach($product as $product=>$value){
                 <div class="col-sm-12 w3-border-bottom">
                     crawley@email
                 </div>
-                
+
             </div>
             <div class="col-sm-6">Sales</div>
         </div>
@@ -90,25 +95,13 @@ foreach($product as $product=>$value){
                     </div>
                          <hr>
                     <h3>2. What Was Purchased?</h3>
-                    <p>Choose Products From List</p>
+                    <p>Check Products From List & Specify Quantity Sold</p>
                     <div class="dropdown">
                       <button class="btn btn-primary dropdown-toggle form-control" type="button" data-toggle="dropdown">Choose Product</button>
-                      <ul class="dropdown-menu">
+                      <ul class="dropdown-menu form-control row" style="height:100px;overflow-y:auto;">
                         <!-- select all company products from table -->
                           <!-- How will you keep track of how many of each were sold?-->
-                          <?php
-                          $stmt = "SELECT * FROM products WHERE CompID = ?";
-                          $select = $pdo->prepare($stmt);
-                          $select->execute([$_SESSION['compID']]);
-                          foreach($select as $product){
-                          ?>
-                          <li class="w3-padding"><input type="checkbox" name="product[]" value="<?php echo $product['ProductID'];?>"><?php echo $product['ProductName'];?>
-                          <input type="number" name="<?php echo $product['ProductID'];?>" value="1" min="1" max="99"> Qty
-                          </li>
-                          <hr>
-                          <?php
-                          }
-                          ?>
+                            <?php displayProductsInListWithCheckbox($_SESSION['compID']);?>
                       </ul>
                     </div>
                     <br>
@@ -117,7 +110,7 @@ foreach($product as $product=>$value){
                     <input type="submit" name="neworder" value="Submit Sale" class="form-control w3-green">
                 </form>
             <br>
-            <?php 
+            <?php
             $order1 = array(
                 'name'=>'Caleb',
                 'items'=>array(
@@ -128,7 +121,7 @@ foreach($product as $product=>$value){
                 'notes' => 'nothing'
             );
             //print_r($order1['items']);
-            
-            
-            
+
+
+
 getMtFooter();?>
