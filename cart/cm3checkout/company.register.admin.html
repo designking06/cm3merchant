@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <title>CCA Template</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+    <body class="">
+      <!-- navigation-->
+      <div role="navigation" class="w3-card w3-white w3-margin-bottom">
+        <ul class="nav flex-column flex-sm-row justify-content-center">
+          <li class="nav-item flex-sm-fill">
+            <a class="nav-link active disabled" href="http://cagency.net" target="_blank"><b>CCA Home</b></a>
+          </li>
+          <li class="nav-item flex-sm-fill dropdown" data-toggle="dropdown">
+            <a class="nav-link dropdown-toggle disabled" href="#">Explore</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#" style="color:#c2a23a;">The Stage</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item w3-text-blue" href="#">CM3</a>
+            </div>
+          </li>
+          <li class="nav-item flex-sm-fill">
+            <a class="nav-link disabled" href="#">Deals(disabled)</a>
+          </li>
+        </ul>
+      </div>
+      <div class="container w3-white" style="min-height:1100px;">
+        <div id="form" class="container-fluid text-center w3-padding">
+          <div class="row"><div class="col-sm-12 text-center"><h1 class="w3-text-blue">Crawley Creative Management System</h1></div></div>
+          <hr>
+          <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8"><p class="lead">The revolutionary management app,
+              created to help anyone faced with making decisions. Take advantage of our statistics capabilities,
+              storage space, customer service, client management and more.</p>
+            </div>
+            <div class="col-sm-2"></div>
+          </div>
+          <hr>
+          <div class="row"><div class="col-sm-12"><h2>Create Your Admin:</h2></div></div>
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="w3-card-4 w3-margin" style="min-height:;">
+              <div class="w3-padding w3-blue"><h2>Company Name: Admin</h2></div>
+              <ul class="w3-ul" style="min-height:;">
+                <li class="w3-padding-16"><b>Create & Manage Staff</b></li>
+                <li class="w3-padding-16">Create Staff Groups</li>
+                <li class="w3-padding-16"><b>Make High Level Changes</b></li>
+                <li class="w3-padding-16">Publish Announcements</li>
+              </ul>
+              <div id="creatorForm" class="" style="display:none;">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm-12 text-left">
+                      <button class="btn w3-red w3-small" onclick="document.getElementById('creatorForm').style.display='none'">Close Form</button>
+                    </div>
+                  </div>
+                    <form action="" method="POST" class="w3-margin text-left">
+                      <legend>Email</legend>
+                      <input type="email" placeholder="email" class="form-control">
+                      <legend>Full Name</legend>
+                      <div class="row">
+                        <div class="col-sm-6"><input type="text" placeholder="first name" class="form-control"></div>
+                        <div class="col-sm-6"><input type="text" placeholder="last name" class="form-control"></div>
+                      </div>
+                        <legend>Username</legend>
+                      <input type="text" placeholder="username" class="form-control">
+                      <legend>Password</legend>
+                      <input type="password" placeholder="password" class="form-control">
+                      <input type="hidden" name="compId">
+                      <input type="submit" value="Register Admin" class="w3-margin btn btn-primary w3-small">
+                    </form>
+                    <hr><hr>
+                </div>
+              </div>
+              <div class="w3-padding w3-margin"><button class="btn" onclick="document.getElementById('creatorForm').style.display='block'">Open Form</button></div>
+            </div>
+          </div>
+          </div>
+        </div>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+      </body>
+      <style>
+      body{
+        background-image:url('images/bg_cca.svg');width:100%;
+        background-attachment: fixed;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      </style>
+    </html>

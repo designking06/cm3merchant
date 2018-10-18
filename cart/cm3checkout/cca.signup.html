@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <title>CCA Template</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+    <body class="">
+      <!-- navigation-->
+      <div role="navigation" class="w3-card w3-white w3-margin-bottom">
+        <ul class="nav flex-column flex-sm-row justify-content-center">
+          <li class="nav-item flex-sm-fill">
+            <a class="nav-link active disabled" href="http://cagency.net" target="_blank"><b>CCA Home</b></a>
+          </li>
+          <li class="nav-item flex-sm-fill dropdown" data-toggle="dropdown">
+            <a class="nav-link dropdown-toggle disabled" href="#">Explore</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#" style="color:#c2a23a;">The Stage</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item w3-text-blue" href="#">CM3</a>
+            </div>
+          </li>
+          <li class="nav-item flex-sm-fill">
+            <a class="nav-link disabled" href="#">Deals(disabled)</a>
+          </li>
+        </ul>
+      </div>
+      <div class="container w3-white" style="min-height:1100px;">
+        <div id="form" class="container-fluid text-center w3-padding">
+          <div class="row"><div class="col-sm-12 text-center"><h1 class="w3-text-blue">Crawley Creative Management System</h1></div></div>
+          <hr>
+          <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8"><p class="lead">The revolutionary management app,
+              created to help anyone faced with making decisions. Take advantage of our statistics capabilities,
+              storage space, customer service, client management and more.</p>
+            </div>
+            <div class="col-sm-2"></div>
+          </div>
+          <hr>
+          <div class="row"><div class="col-sm-12"><h2>Register For:</h2></div></div>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="w3-card-2 w3-margin" style="min-height:350px;">
+              <div class="w3-padding w3-blue"><h2>CM3 Creator</h2></div>
+              <ul class="w3-ul" style="min-height:350px;">
+                <li class="w3-padding-16">Blogs</li>
+                <li class="w3-padding-16">Music</li>
+                <li class="w3-padding-16">Videos</li>
+                <li class="w3-padding-16"><b>Group Collaboration</b></li>
+                <li class="w3-padding-16"><b>The Stage Access</b></li>
+                <li class="w3-padding-24"></li>
+                <li class="w3-padding-16"></li>
+              </ul>
+              <div class="w3-padding"><button class="btn" onclick="document.getElementById('creatorForm').style.display='block'">Sign Up</button></div>
+            </div>
+          </div>
+            <div class="col-sm-6">
+              <div class="w3-card-2 w3-margin" style="min-height:350px;">
+              <div class="w3-padding w3-green"><h2>CM3 Merchant</h2></div>
+              <ul class="w3-ul" style="min-height:350px;">
+                <li class="w3-padding-16">Advertise</li>
+                <li class="w3-padding-16">Blogs</li>
+                <li class="w3-padding-16"><b>Expenses & Revenue Management</b></li>
+                <li class="w3-padding-16"><b>Inventory Management</b></li>
+                <li class="w3-padding-16"><b>Manage & Sell Products</b></li>
+                <li class="w3-padding-16">Website Integration</li>
+                <li class="w3-padding-16"></li>
+              </ul>
+              <div class="w3-padding"><button class="btn" onclick="document.getElementById('companyForm').style.display='block'">Sign Up</button></div>
+            </div>
+          </div>
+          </div>
+          <div id="creatorForm" class="w3-modal" style="display:none;">
+            <div class="w3-modal-content container w3-padding-64">
+              <div class="row">
+                <div class="col-sm-12 text-right">
+                  <button class="btn w3-red" onclick="document.getElementById('creatorForm').style.display='none'">Close</button>
+                </div>
+              </div>
+            <!--form action="payment.process.stripe.php" method="POST" class="w3-margin text-left">
+              <legend>Email</legend>
+              <input type="email" placeholder="email" class="form-control">
+              <div class="row">
+                <legend>Full Name</legend>
+                <div class="col-sm-6"><input type="text" placeholder="first name" class="form-control"></div>
+                <div class="col-sm-6"><input type="text" placeholder="last name" class="form-control"></div>
+              </div>
+                <legend>Username</legend>
+              <input type="text" placeholder="username" class="form-control">
+              <legend>Password</legend>
+              <input type="password" placeholder="password" class="form-control"><br>
+              <!-- insert stripe checkout button-->
+              <script
+                src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                data-key="pk_test_qUgFXuTWbRNMy9wX7V8qIitR"
+                data-amount="250"
+                data-name="Crawley Creative Agency"
+                data-description="CM3 Creator"
+                data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                data-locale="auto">
+              </script>
+          </form-->
+        </div>
+        </div>
+          <div id="companyForm" class="w3-modal" style="display:none;">
+            <div class="w3-modal-content container w3-padding-64">
+              <div class="row">
+                <div class="col-sm-12 text-right">
+                  <button class="btn w3-red" onclick="document.getElementById('companyForm').style.display='none'">Close</button>
+                </div>
+              </div>
+              <!-- stripe payment form -->
+              <form action="submit.php" method="POST" id="paymentFrm">
+                  <p>
+                      <label>Organzation Name</label>
+                      <input type="text" name="name" size="50" />
+                  </p>
+                  <p>
+                      <label>Email</label>
+                      <input type="text" name="email" size="50" />
+                  </p>
+                  <p><label>Company Login Name</label>
+                    <input type="text" name="uid" placeholder="username" class="form-control">
+                  </p>
+                  <p>
+                    <label>Company Login Code</label>
+                  <input type="password" name="pwd" placeholder="password" class="form-control">
+                </p><hr>
+                  <p>
+                      <label>Card Number</label>
+                      <input type="text" name="card_num" size="20" autocomplete="off" class="card-number" />
+                  </p>
+                  <p>
+                      <label>CVC</label>
+                      <input type="text" name="cvc" size="4" autocomplete="off" class="card-cvc" />
+                  </p>
+                  <p>
+                      <label>Expiration (MM/YYYY)</label>
+                      <input type="text" name="exp_month" size="2" class="card-expiry-month"/>
+                      <span> / </span>
+                      <input type="text" name="exp_year" size="4" class="card-expiry-year"/>
+                  </p>
+                  <button type="submit" id="payBtn">Submit Payment</button>
+              </form>
+            <!--form action="payment.process.stripe.php" class="w3-margin text-left">
+              <legend>Email</legend>
+              <input type="email" name="email" placeholder="email" class="form-control">
+              <legend>Organization Name</legend>
+              <input type="text" name="name" placeholder="name" class="form-control">
+              <input type="hidden" name="confirmation" value="paid">
+              <input type="hidden" name="stripeAmt" value="250">
+              <br>
+              <script
+                src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                data-key="pk_test_qUgFXuTWbRNMy9wX7V8qIitR"
+                data-amount="250"
+                data-name="Crawley Creative Agency"
+                data-description="CM3 Merchant"
+                data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                data-locale="auto">
+              </script>
+          </form-->
+        </div>
+        </div>
+        </div>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+      </body>
+      <style>
+      body{
+        background-image:url('images/bg_cca.svg');width:100%;
+        background-attachment: fixed;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      </style>
+    </html>
